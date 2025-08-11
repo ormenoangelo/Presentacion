@@ -1,65 +1,153 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portafolio de Angelo</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #0078D7;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    section {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    h2 {
-      color: #0078D7;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #eee;
-      font-size: 0.9rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Css/style.css">
+  <title>Portafolio Angelo Ormeño</title>
 </head>
 <body>
+  <!-- HEADER -->
+  <div class="container">
+    <header>
+      <!-- <img src="imagenes/Avatar.jpg" class="logo" alt=""> -->
+       <h1 class="logo-header">AngeloDev</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#">sobre mi</a></li>
+          <li><a href="#">Proyectos</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Certificaciones</a></li>        
+        </ul>
+      </nav>
+      <button class="cv-btn">CURRICULUM VITAE</button>
+    </header>
 
-  <header>
-    <h1>Portafolio de Angelo</h1>
-    <p>Desarrollador Web | UI/UX | Optimización de Bases de Datos codigo 2</p>
-  </header>
+    <div class="grid-container">
+      <div>
+        <p class="titulo-portada">Bienvenido.</p>
+          <p class="texto-portada">Mi nombre es Angelo Ormeño, soy desarrollador Web con sede en Perú, Lima, 
+            Callao. He trabajado en una amplia variedad de proyectos front-end y Back-end, desde aplicaciones para escritorio hasta plataformas de capacitación y auditoría de Gestión de Seguridad, 
+            con un enfoque en crear interfaces limpias y bien diseñadas que no solo se vean bien, sino que también ofrezcan una experiencia de usuario fluida.
+          </p>
+      </div>
+      <div>
+        <img src="imagenes/Avatar.jpg" class="logo-portada" alt="">
+      </div>
+    </div>
+  </div>
+  <!--  -->
 
-  <section>
-    <h2>Sobre mí</h2>
-    <p>Soy un desarrollador apasionado por crear experiencias digitales intuitivas y eficientes. Me especializo en C#, SQL Server, y diseño de interfaces centradas en el usuario.</p>
-
-    <h2>Proyectos destacados</h2>
-    <ul>
-      <li><strong>To-Do App:</strong> Aplicación con filtros, validación en tiempo real y diferenciación visual por urgencia.</li>
-      <li><strong>Optimización de bases de datos:</strong> Reducción de tamaño en archivos `.mdf` y `.ldf` mediante análisis estructurado.</li>
-      <li><strong>Integración de AI:</strong> Asistentes personalizados para mejorar flujos de trabajo en WhatsApp y web.</li>
-    </ul>
-
-    <h2>Contacto</h2>
-    <p>📧 angelo@email.com<br>
-       🌐 <a href="https://github.com/tuusuario" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
-    </p>
+  <!-- PROYECTOS -->
+   
+  <section class="section-container">
+    <h2 class="titulo-proyecto">Mi Trabajo</h2>
+    <p class="texto-proyecto">Una colección de proyectos en los que he trabajado.</p>
+    <div class="grid-proyecto">
+      <div class="proyecto">
+        <div class="proyecto-envolver">
+          <img src="imagenes/bay.webp" class="logo-proyecto" alt="">
+          <!-- <div style="background-image:url(imagenes/bay.webp);background-size: cover;" class="logo-proyecto"></div> -->
+          <h1 class="descripcion-proyecto">repositorio</h1>
+          <p class="texto-repositorio-proyecto">Domposer es un creador de sitios web con una interfaz que permite agregar y reorganizar HTML y CSS rápidamente, 
+            subir y descargar proyectos y archivos creados, iniciar sesión para guardar hasta 5 proyectos y puede instalarse como una aplicación web progresiva. 
+            La pila es Laravel para el backend/API y JavaScript estándar para el frontend. El repositorio de Github es privado actualmente.
+          </p>
+        </div>
+        <div class="proyecto-btns">
+          <div><a href=""><img src="imagenes/internet.svg" class="icono-proyecto" alt=""></a></div>
+          <div><a href=""><img src="imagenes/github.svg" class="icono-proyecto" alt=""></a></div>
+          <!-- <div>3</div> -->
+        </div>
+      </div>
+      <div class="proyecto">
+        <div class="proyecto-envolver">
+          <img src="imagenes/bay.webp" class="logo-proyecto" alt="">
+          <!-- <div style="background-image:url(imagenes/bay.webp);background-size: cover;" class="logo-proyecto"></div> -->
+          <h1 class="descripcion-proyecto">repositorio</h1>
+          <p class="texto-repositorio-proyecto">Domposer es un creador de sitios web con una interfaz que permite agregar y reorganizar HTML y CSS rápidamente, 
+            subir y descargar proyectos y archivos creados, iniciar sesión para guardar hasta 5 proyectos y puede instalarse como una aplicación web progresiva. 
+            La pila es Laravel para el backend/API y JavaScript estándar para el frontend. El repositorio de Github es privado actualmente.
+          </p>
+        </div>
+        <div class="proyecto-btns">
+          <div><a href=""><img src="imagenes/internet.svg" class="icono-proyecto" alt=""></a></div>
+          <div><a href=""><img src="imagenes/github.svg" class="icono-proyecto" alt=""></a></div>
+        </div>
+      </div>
+      <div class="proyecto">
+        <div class="proyecto-envolver">
+          <img src="imagenes/bay.webp" class="logo-proyecto" alt="">
+          <!-- <div style="background-image:url(imagenes/bay.webp);background-size: cover;" class="logo-proyecto"></div> -->
+          <h1 class="descripcion-proyecto">repositorio</h1>
+          <p class="texto-repositorio-proyecto">Domposer es un creador de sitios web con una interfaz que permite agregar y reorganizar HTML y CSS rápidamente, 
+            subir y descargar proyectos y archivos creados, iniciar sesión para guardar hasta 5 proyectos y puede instalarse como una aplicación web progresiva. 
+            La pila es Laravel para el backend/API y JavaScript estándar para el frontend. El repositorio de Github es privado actualmente.
+          </p>
+        </div>
+        <div class="proyecto-btns">
+          <div><a href=""><img src="imagenes/internet.svg" class="icono-proyecto" alt=""></a></div>
+          <div><a href=""><img src="imagenes/github.svg" class="icono-proyecto" alt=""></a></div>
+        </div>
+      </div>
+      <div class="proyecto">
+        <div class="proyecto-envolver">
+          <img src="imagenes/bay.webp" class="logo-proyecto" alt="">
+          <!-- <div style="background-image:url(imagenes/bay.webp);background-size: cover;" class="logo-proyecto"></div> -->
+          <h1 class="descripcion-proyecto">repositorio</h1>
+          <p class="texto-repositorio-proyecto">Domposer es un creador de sitios web con una interfaz que permite agregar y reorganizar HTML y CSS rápidamente, 
+            subir y descargar proyectos y archivos creados, iniciar sesión para guardar hasta 5 proyectos y puede instalarse como una aplicación web progresiva. 
+            La pila es Laravel para el backend/API y JavaScript estándar para el frontend. El repositorio de Github es privado actualmente.
+          </p>
+        </div>
+        <div class="proyecto-btns">
+          <div><a href=""><img src="imagenes/internet.svg" class="icono-proyecto" alt=""></a></div>
+          <div><a href=""><img src="imagenes/github.svg" class="icono-proyecto" alt=""></a></div>
+        </div>
+      </div>
+      <div class="proyecto">
+        <div class="proyecto-envolver">
+          <img src="imagenes/bay.webp" class="logo-proyecto" alt="">
+          <!-- <div style="background-image:url(imagenes/bay.webp);background-size: cover;" class="logo-proyecto"></div> -->
+          <h1 class="descripcion-proyecto">repositorio</h1>
+          <p class="texto-repositorio-proyecto">Domposer es un creador de sitios web con una interfaz que permite agregar y reorganizar HTML y CSS rápidamente, 
+            subir y descargar proyectos y archivos creados, iniciar sesión para guardar hasta 5 proyectos y puede instalarse como una aplicación web progresiva. 
+            La pila es Laravel para el backend/API y JavaScript estándar para el frontend. El repositorio de Github es privado actualmente.
+          </p>
+        </div>
+        <div class="proyecto-btns">
+          <div><a href=""><img src="imagenes/internet.svg" class="icono-proyecto" alt=""></a></div>
+          <div><a href=""><img src="imagenes/github.svg" class="icono-proyecto" alt=""></a></div>
+        </div>
+      </div>
+      <div class="proyecto">
+        <div class="proyecto-envolver">
+          <img src="imagenes/bay.webp" class="logo-proyecto" alt="">
+          <!-- <div style="background-image:url(imagenes/bay.webp);background-size: cover;" class="logo-proyecto"></div> -->
+          <h1 class="descripcion-proyecto">repositorio</h1>
+          <p class="texto-repositorio-proyecto">Domposer es un creador de sitios web con una interfaz que permite agregar y reorganizar HTML y CSS rápidamente, 
+            subir y descargar proyectos y archivos creados, iniciar sesión para guardar hasta 5 proyectos y puede instalarse como una aplicación web progresiva. 
+            La pila es Laravel para el backend/API y JavaScript estándar para el frontend. El repositorio de Github es privado actualmente.
+          </p>
+        </div>
+        <div class="proyecto-btns">
+          <div><a href=""><img src="imagenes/internet.svg" class="icono-proyecto" alt=""></a></div>
+          <div><a href=""><img src="imagenes/github.svg" class="icono-proyecto" alt=""></a></div>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- CONTACTO -->
+
+<!--   <section class="section-container">
+    <div class="">
+      <h2>CONTACTO</h2>      
+    </div>
+  </section> -->
+
   <footer>
-    &copy; 2025 Angelo. Todos los derechos reservados.
+    <P>2025 @AngeloDev.com</P>
   </footer>
 
 </body>
