@@ -349,3 +349,47 @@ footer{
   to { opacity: 1; transform: scale(1.05); }
 }
 
+/*responsive*/
+
+@media (max-width: 768px) {
+  .container{
+  min-height: 60vh;
+  width: 100%;
+  background-color: rgba(189, 192, 241, 0.925);
+  /* background-image: linear-gradient(to right, rgb(59,67,213), transparent); */
+  background-size: cover;
+  background-position: center;
+
+  }
+  .titulo-portada{
+  text-align: center;
+  font-size:50px;
+  margin: 114px 10px -38px 0px;
+  /* transform: translateY(-0%); */
+  white-space: nowrap;
+  overflow: hidden;
+  letter-spacing: -5px;
+  }
+  #preloader{
+  width: 100vw;
+  height: 100vh;
+  padding: 2em;
+
+  }
+  .loader-text {
+    font-size: 1.5em;
+  }
+  .ball {
+    width: 12px;
+    height: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .loader-text {
+    font-size: 1.2em;
+  }
+  .ball {
+    width: 10px;
+    height: 10px;
+  }
+}
