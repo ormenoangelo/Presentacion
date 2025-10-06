@@ -8,7 +8,8 @@
 .container{
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(to right, rgba(59,67,213,0.6), transparent);
+  background-color: rgba(189, 192, 241, 0.925);
+  /* background-image: linear-gradient(to right, rgb(59,67,213), transparent); */
   background-size: cover;
   background-position: center;
 
@@ -20,6 +21,7 @@ header{
   background-color: #fff;
   padding: 12px 10%;
   border-radius: 0px 0px 10px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   /* border: 5px solid black; */
 }
 .logo{
@@ -45,51 +47,118 @@ header{
   gap: 5px;
   border: 0;
   outline: 0;
-  background: rgba(59,67,213,0.6);
+  /* background: rgba(59,67,213,0.6); */
+  border:3px solid rgba(59,67,213,0.6);
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 10px 10px;
   cursor: pointer;
+  color: rgba(59,67,213,0.6);
+  position: relative;
+	overflow: hidden;
+}
+/* boton 2, relleno progresivo desde abajo --------------------- */
+.btn-fill {
+	background: white;
+	color: rgba(59,67,213,0.6);
+	padding: 14px 32px;
+	border: 2px solid rgba(59,67,213,0.6);
+	border-radius: 8px;
+	z-index: 1; /* por encima de el relleno */
+}
+
+/* capa de relleno que se anima desde abajo */
+.btn-fill::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	z-index: -1; /* por detras del boton */
+	background: rgba(59,67,213,0.6);
+	border-radius: 6px;
+
+	/* transicion en la altura del relleno */
+	transition: height 0.4s ease-in;
+}
+
+/* cuando hay hover, activar la altura del before */
+.btn-fill:hover::before {
+	height: 100%;
+}
+.btn-content {
+	position: relative;
+	z-index: 2;
+	transition: color 0.4s ease;
+}
+
+.btn-fill:hover .btn-content {
+	color: white;
 }
 
 /*PORTADA*/
 
 .logo-portada{ 
-  margin: 200px 100px 200px 200px;
-  max-width: 50%;
+  margin: 0px 0px 0px 0px;
+  max-width: 40%;
   border-radius: 500px;
 }
 .titulo-portada{
   text-align: center;
   font-size:100px;
-  margin: 250px 0px 0px 0px;
+  margin: 114px 10px -38px 0px;
   /* transform: translateY(-0%); */
   white-space: nowrap;
   overflow: hidden;
+  letter-spacing: -10px;
 }
+.subtitulo-portada{
+  text-align: center;
+  font-size: 30px;
+  /* white-space: nowrap; */
+  overflow: hidden;
+}
+.grid-container-portada{
+  display: grid;
+  /* border:  1px solid rgb(0, 0, 0); */
+  /* grid-template-columns: repeat(auto-fit,minmax(100px,1fr)); */
+  gap: 15px;
+  justify-content: center;
+  text-align: center;
+  display: grid; place-items: center;
+}
+
 /* Animation */
-.anim-typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) infinite normal;
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 2px solid #00FFAB; /* cursor */
+  white-space: nowrap;
+  width: 0; /* empieza sin ancho */
+  animation: typing 6s steps(24, end) infinite, blink-caret 0.5s step-end infinite;
 }
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 10em;}
+
+@keyframes typing {
+/*   from { width: 0 }
+  to { width: 11em } */ /* ajusta al ancho exacto del texto */
+  0%   { width: 0 }
+  50%  { width: 11em }        /* escribe */
+  80%  { width: 11em }        /* pausa visible */
+  100% { width: 0 }             /* borrado lento */
+
 }
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #00FFAB }
 }
-.intro{
-  opacity: 0;
-  animation: fadeIn 2s ease-in-out 5s forwards;
-}
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
+
 
 .texto-portada{
     margin: 0px 0px 0px 60px;
 }
+
 
 /*PROYECTOS*/
 
@@ -117,6 +186,7 @@ header{
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
+
 }
 .proyecto {
     margin: 0px auto;
@@ -191,7 +261,9 @@ header{
   grid-template-columns: repeat(auto-fit, minmax(200px, 0fr));
   gap: 20px;
   justify-content: center;
-  padding: 10px;
+  padding: 50px;
+  margin: 0px 0px 0px 0px;
+  background-color: rgba(189, 192, 241, 0.925);
 }
 
 .card {
@@ -245,5 +317,35 @@ footer{
 
 .corrector{
   border: 1px solid black;
+}
+/* Preloader */
+#preloader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.6s ease;
+}
+
+#preloader.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader-text {
+  font-size: 2rem;
+  color: black;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 1.5s ease-in-out infinite alternate;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0.3; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1.05); }
 }
 
